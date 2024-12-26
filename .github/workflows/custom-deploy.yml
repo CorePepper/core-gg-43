@@ -1,46 +1,46 @@
-name: custom deploy
+# name: custom deploy
 
-on:
-  push:
-    branches: [ main ]
+# on:
+#   push:
+#     branches: [ main ]
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
+# permissions:
+#   contents: write
+#   pages: write
+#   id-token: write
 
-jobs:
-  build-and-deploy:
-    environment:
-      name: github-pages
+# jobs:
+#   build-and-deploy:
+#     environment:
+#       name: github-pages
 
-    runs-on: ubuntu-latest
+#     runs-on: ubuntu-latest
 
-    steps:
-      # 1) リポジトリのコードをチェックアウト
-      - name: Check out code
-        uses: actions/checkout@v3
+#     steps:
+#       # 1) リポジトリのコードをチェックアウト
+#       - name: Check out code
+#         uses: actions/checkout@v3
 
-      # 2) Node.js環境をセットアップ（バージョンはお好みで）
-      - name: Setup Node
-        uses: actions/setup-node@v3
-        with:
-          node-version: 18
+#       # 2) Node.js環境をセットアップ（バージョンはお好みで）
+#       - name: Setup Node
+#         uses: actions/setup-node@v3
+#         with:
+#           node-version: 18
 
-      # 3) 依存パッケージをインストール
-      - name: Install dependencies
-        run: npm ci
+#       # 3) 依存パッケージをインストール
+#       - name: Install dependencies
+#         run: npm ci
 
-      # 4) ビルドコマンド (package.json の "build": "vite build" を想定)
-      - name: Build
-        run: npm run build
+#       # 4) ビルドコマンド (package.json の "build": "vite build" を想定)
+#       - name: Build
+#         run: npm run build
 
-      # 5) ビルド成果物(distフォルダ)をアップロード
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v2 # v2に更新
-        with:
-          path: './dist'
+#       # 5) ビルド成果物(distフォルダ)をアップロード
+#       - name: Upload artifact
+#         uses: actions/upload-pages-artifact@v2 # v2に更新
+#         with:
+#           path: './dist'
 
-      # 6) GitHub Pagesにデプロイ
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v2 # v2に更新
+#       # 6) GitHub Pagesにデプロイ
+#       - name: Deploy to GitHub Pages
+#         uses: actions/deploy-pages@v2 # v2に更新
