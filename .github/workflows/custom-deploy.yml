@@ -31,6 +31,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
+      # 3.5) キャッシュをクリア
+      - name: Clear cache
+        run: rm -rf node_modules
+
       # 4) ビルドコマンド (package.json の "build": "vite build" を想定)
       - name: Build
         run: npm run build
