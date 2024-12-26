@@ -33,7 +33,7 @@ jobs:
         
       # 3.3) vite をプロジェクトの依存関係としてインストール
       - name: Install vite as a project dependency
-        run: npm install vite
+        run: npm install vite --force
 
       # 3.5) vite をグローバルにインストール
       - name: Install vite globally
