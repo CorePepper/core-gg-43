@@ -30,4 +30,6 @@ export default defineConfig(({ mode }) => ({
       },
     },
   },
+  // baseオプションを明示的に指定（念のため）
+  base: '/',
 }));
