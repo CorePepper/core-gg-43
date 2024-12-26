@@ -31,6 +31,10 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
+      # 3.3) vite をプロジェクトの依存関係としてインストール
+      - name: Install vite as a project dependency
+        run: npm install vite
+
       # 3.5) vite をグローバルにインストール
       - name: Install vite globally
         run: npm install -g vite
