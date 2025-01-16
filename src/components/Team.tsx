@@ -2,17 +2,16 @@ import { Trophy, Mail, ArrowRight } from "lucide-react";
 
 const achievements = [
   "KOPL S4 MIDseason Final 2位",
-  "KOPL S4 Play Off 3位",
+  "KOPL S4 Play OFF 3位",
   "KOPL Grand Final 3位",
   "荒野Championship 決勝 8位",
-  "KOPL S5 Play Off 1位",
+  "KOPL S5 Play OFF 1位",
   "KOPL S5 MIDseason M1 Final 6位",
 ];
 
 const Team = () => {
   return (
     <section id="team" className="py-20 bg-navy relative overflow-hidden">
-      {/* Background */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-gradient-to-b from-navy via-navy/90 to-navy" />
       </div>
