@@ -1,6 +1,6 @@
 import { ArrowLeft } from "lucide-react";
 import Navigation from "@/components/Navigation";
-import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { ReviewList } from "@/components/review/ReviewList";
 import { ReviewItem } from "@/components/review/ReviewItem";
@@ -64,7 +64,6 @@ const reviews = [
 ];
 
 const Reviews = () => {
-  const navigate = useNavigate();
   const isMobile = useIsMobile();
   
   useEffect(() => {
@@ -96,13 +95,13 @@ const Reviews = () => {
     <div className="min-h-screen bg-navy">
       <Navigation />
       <div className="container mx-auto px-4 py-20">
-        <button
-          onClick={() => navigate(-1)}
+        <Link
+          to="/"
           className="inline-flex items-center px-6 py-3 bg-navy-light/80 backdrop-blur-sm text-gold hover:text-gold-light hover:bg-navy-light transition-all duration-300 rounded-lg shadow-lg mb-8 group"
         >
           <ArrowLeft className="mr-2 h-5 w-5 group-hover:-translate-x-1 transition-transform" />
           戻る
-        </button>
+        </Link>
 
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-white mb-4">プロ選手の声</h1>
