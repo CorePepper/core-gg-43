@@ -6,14 +6,7 @@ import { ReviewList } from "@/components/review/ReviewList";
 import { ReviewItem } from "@/components/review/ReviewItem";
 import { useIsMobile } from "@/hooks/use-mobile";
 
-interface Review {
-  name: string;
-  rating: number;
-  text: string;
-  secondImage?: string;
-}
-
-const reviews: Review[] = [
+const reviews = [
   {
     name: "わずぼーん",
     rating: 5,
